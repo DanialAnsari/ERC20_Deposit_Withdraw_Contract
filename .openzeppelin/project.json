@@ -1,0 +1,26 @@
+{
+  "manifestVersion": "2.2",
+  "contracts": {
+    "ERC20": "ERC20",
+    "Temp_ERC20": "Temp_ERC20"
+  },
+  "dependencies": {},
+  "name": "erc20_withdraw_deposit",
+  "version": "1.0.0",
+  "compiler": {
+    "compilerSettings": {
+      "optimizer": {
+        "enabled": false,
+        "runs": "200"
+      }
+    },
+    "typechain": {
+      "enabled": false
+    },
+    "manager": "openzeppelin",
+    "solcVersion": "0.6.0",
+    "artifactsDir": "build/contracts",
+    "contractsDir": "contracts"
+  },
+  "telemetryOptIn": false
+}
