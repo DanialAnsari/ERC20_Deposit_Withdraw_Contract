@@ -19,16 +19,11 @@ function initialize0(ERC20 _add) public initializer {
 
 }
 
-function returnAllowanec(address owner,address spender)public view returns(uint256){
-        return token.allowance(owner,spender);
-}
+
 function deposit_token(uint _token,uint _min) public {
-        
-        
         token.transferFrom(msg.sender,address(this),_token);
         balance[msg.sender]=SafeMath.add(balance[msg.sender],_token);
-        timeSet[msg.sender]=SafeMath.add(now,_min*1 minutes);
-        
+        timeSet[msg.sender]=SafeMath.add(now,_min*1 minutes); 
 }
 
 function withdraw_token() public {

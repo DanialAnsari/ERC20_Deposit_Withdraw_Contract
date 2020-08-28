@@ -64,15 +64,16 @@ function initialize() public initializer {
         uint256 amount
     ) external override  returns (bool) {
         require(
-            amount <= _allowances[sender][msg.sender] || msg.sender==sender,
+            amount <= _allowances[sender][msg.sender],
             "Amount inputted is greater than approved amount"
         );
-        require(
-            amount <= _balance[sender],
-            "Inputted Sender does not have the requested amount of tokens"
-        );
+
+        
         _balance[recipient] += amount;
         _balance[sender] -= amount;
+        _allowances[sender][msg.sender] -=amount;
+
+        return true;
     }
 
     function allowance(address _owner, address spender)
