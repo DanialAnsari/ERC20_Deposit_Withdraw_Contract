@@ -1,0 +1,24 @@
+{
+  "name": "erc20_withdraw_deposit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "networks.js",
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "ganache-cli": "^6.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanialAnsari/ERC20_Deposit_Withdraw_Contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanialAnsari/ERC20_Deposit_Withdraw_Contract/issues"
+  },
+  "homepage": "https://github.com/DanialAnsari/ERC20_Deposit_Withdraw_Contract#readme"
+}

@@ -28,14 +28,7 @@ function initialize() public initializer {
 
 
 
-    function deposit2Contract(uint _amount) public{
-        require(_balance[msg.sender]>=_amount,"User does not own requested amount of tokens to Deposit");
-        _balance[msg.sender] -= _amount;
-    }
 
-    function withdrawFromContract(uint _amount) public {
-         _balance[msg.sender] += _amount;
-    }
 
     function totalSupply() external view override returns (uint256) {
         return total_supply;
@@ -71,7 +64,7 @@ function initialize() public initializer {
         uint256 amount
     ) external override  returns (bool) {
         require(
-            amount <= _allowances[sender][msg.sender],
+            amount <= _allowances[sender][msg.sender] || msg.sender==sender,
             "Amount inputted is greater than approved amount"
         );
         require(
